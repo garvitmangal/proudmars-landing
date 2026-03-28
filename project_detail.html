@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Project Detail | ProudMars</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-container": "#004d57",
+              "surface-bright": "#2c2c2c",
+              "tertiary-fixed": "#00e3fd",
+              "secondary-fixed-dim": "#d6d4d3",
+              "on-error": "#490013",
+              "secondary-container": "#474746",
+              "on-primary-container": "#4c0600",
+              "inverse-surface": "#fcf8f8",
+              "on-secondary-fixed-variant": "#5c5b5b",
+              "on-tertiary-fixed-variant": "#005762",
+              "inverse-primary": "#bb1d00",
+              "outline-variant": "#484847",
+              "on-secondary-container": "#d2d0cf",
+              "on-tertiary-fixed": "#003840",
+              "primary-fixed": "#ff775d",
+              "surface-container": "#1a1919",
+              "tertiary-dim": "#00d4ec",
+              "tertiary-container": "#00e3fd",
+              "surface-variant": "#262626",
+              "on-secondary-fixed": "#403f3f",
+              "error-dim": "#d73357",
+              "primary": "#ff8f78",
+              "surface": "#0e0e0e",
+              "on-secondary": "#525151",
+              "primary-fixed-dim": "#ff5c3e",
+              "outline": "#777575",
+              "error": "#ff6e84",
+              "primary-container": "#ff775d",
+              "tertiary-fixed-dim": "#00d4ec",
+              "background": "#0e0e0e",
+              "surface-dim": "#0e0e0e",
+              "on-background": "#ffffff",
+              "on-surface-variant": "#adaaaa",
+              "secondary-dim": "#d6d4d3",
+              "on-error-container": "#ffb2b9",
+              "surface-container-low": "#131313",
+              "on-tertiary": "#005762",
+              "secondary": "#e5e2e1",
+              "tertiary": "#81ecff",
+              "on-primary-fixed-variant": "#5d0900",
+              "secondary-fixed": "#e5e2e1",
+              "on-primary": "#610a00",
+              "surface-container-lowest": "#000000",
+              "surface-container-highest": "#262626",
+              "surface-container-high": "#201f1f",
+              "on-primary-fixed": "#000000",
+              "on-surface": "#ffffff",
+              "surface-tint": "#ff8f78",
+              "primary-dim": "#ff7257",
+              "inverse-on-surface": "#565554",
+              "error-container": "#a70138"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #0e0e0e;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+        }
+        .headline-font { font-family: 'Space Grotesk', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-[#0e0e0e]/80 backdrop-blur-xl bg-gradient-to-b from-[#0e0e0e] to-transparent">
+<div class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+<div class="text-2xl font-bold font-['Space_Grotesk'] text-[#ff8f78] tracking-tighter">ProudMars</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-[#adaaaa] hover:text-[#ffffff] transition-colors font-['Space_Grotesk'] uppercase tracking-wider text-[0.75rem]" href="#">Home</a>
+<a class="text-[#ff8f78] font-bold border-b-2 border-[#ff8f78] pb-1 font-['Space_Grotesk'] uppercase tracking-wider text-[0.75rem]" href="#">Portfolio</a>
+<a class="text-[#adaaaa] hover:text-[#ffffff] transition-colors font-['Space_Grotesk'] uppercase tracking-wider text-[0.75rem]" href="#">Blog</a>
+<a class="text-[#adaaaa] hover:text-[#ffffff] transition-colors font-['Space_Grotesk'] uppercase tracking-wider text-[0.75rem]" href="#">About</a>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-6 py-2 rounded-md font-label uppercase tracking-widest text-[0.75rem] font-bold active:scale-95 duration-200">
+                Get in Touch
+            </button>
+</div>
+</nav>
+<main class="pt-32 pb-20">
+<!-- Hero Section -->
+<header class="max-w-7xl mx-auto px-8 mb-20">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+<div class="lg:col-span-7">
+<span class="font-label text-tertiary uppercase tracking-widest text-sm mb-4 block">Case Study: 04</span>
+<h1 class="font-headline text-5xl md:text-7xl font-bold tracking-tighter leading-[0.9] text-on-background">
+                        NEURAL TERRAFORM <br/><span class="text-primary">ENGINE v2.1</span>
+</h1>
+<p class="mt-8 text-on-surface-variant font-body text-lg max-w-xl leading-relaxed">
+                        Architecting an autonomous environmental stabilization system for off-world agricultural habitats using reinforced deep learning and real-time atmospheric telemetry.
+                    </p>
+</div>
+<div class="lg:col-span-5 flex flex-col items-start lg:items-end gap-6">
+<div class="flex flex-wrap justify-end gap-2">
+<span class="px-3 py-1 bg-tertiary-container/10 text-tertiary text-[10px] font-label uppercase tracking-widest border border-tertiary/20 rounded-full">Neural Net</span>
+<span class="px-3 py-1 bg-tertiary-container/10 text-tertiary text-[10px] font-label uppercase tracking-widest border border-tertiary/20 rounded-full">PyTorch</span>
+<span class="px-3 py-1 bg-tertiary-container/10 text-tertiary text-[10px] font-label uppercase tracking-widest border border-tertiary/20 rounded-full">Edge AI</span>
+</div>
+<div class="h-px w-full bg-outline-variant/30"></div>
+<div class="flex gap-12">
+<div>
+<p class="font-label text-[10px] uppercase text-on-surface-variant tracking-widest mb-1">Timeline</p>
+<p class="font-headline text-lg font-medium">Q3 2024</p>
+</div>
+<div>
+<p class="font-label text-[10px] uppercase text-on-surface-variant tracking-widest mb-1">Role</p>
+<p class="font-headline text-lg font-medium">Lead AI Architect</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-16 relative aspect-[21/9] w-full overflow-hidden rounded-xl bg-surface-container">
+<img alt="Martian Landscape Visualization" class="w-full h-full object-cover opacity-60" data-alt="Abstract red martian landscape with digital data overlays" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD-k_6sMHGwC_cKLhIKZxnnXFbpEwE-AuPOHPRsb0ub9YEziW5CumrzsDsRbpmBdLSbfMvzy75e5-LQlGwQsIk6A4zj_DgitC0oTWnsECrUzborCvpvVFvXtzHpKvW1ghMT33DvI-Jx1FljLm2IAKSzwjluymYTL0ekCubdMkn2SntTpE4zVCKJP4yLYvkQBp5KmjdfxRWrG1txVoMrqeOFfP2p92HWjdwD-rLJ6hlDVNS_uV9nZ44Vw1uq-CEH5km7662pk8KCz8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+</header>
+<!-- Technical Stack & Context (Bento Style) -->
+<section class="max-w-7xl mx-auto px-8 mb-32">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Problem Statement -->
+<div class="md:col-span-2 p-8 bg-surface-container rounded-xl flex flex-col justify-between border-l-4 border-primary">
+<div>
+<h3 class="font-label text-xs uppercase tracking-widest text-primary mb-6">The Challenge</h3>
+<p class="font-headline text-2xl font-medium leading-tight text-on-surface mb-4">Unpredictable atmospheric volatility in pressurized domes leading to 14% crop loss.</p>
+<p class="text-on-surface-variant font-body text-sm leading-relaxed">
+                            Existing PID controllers were unable to account for non-linear gas pressure shifts caused by external Martian thermal cycles. A predictive model was required to anticipate shifts before they occurred.
+                        </p>
+</div>
+<div class="mt-8 flex items-center gap-4 text-primary">
+<span class="material-symbols-outlined">warning</span>
+<span class="font-label text-[10px] uppercase tracking-tighter">Critical System Failure Risk Identified</span>
+</div>
+</div>
+<!-- Tech Stack Chips -->
+<div class="md:col-span-2 grid grid-cols-2 gap-6">
+<div class="p-6 bg-surface-container-low rounded-xl">
+<h3 class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-4">Core Model</h3>
+<ul class="space-y-3">
+<li class="flex items-center gap-2 font-headline text-sm"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> LSTM Networks</li>
+<li class="flex items-center gap-2 font-headline text-sm"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Transformers</li>
+<li class="flex items-center gap-2 font-headline text-sm"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Graph ML</li>
+</ul>
+</div>
+<div class="p-6 bg-surface-container-low rounded-xl">
+<h3 class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-4">Infrastructure</h3>
+<ul class="space-y-3">
+<li class="flex items-center gap-2 font-headline text-sm"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> CUDA 12.0</li>
+<li class="flex items-center gap-2 font-headline text-sm"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Kubernetes</li>
+<li class="flex items-center gap-2 font-headline text-sm"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Redis Streams</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- The Solution (Technical Deep Dive) -->
+<section class="max-w-7xl mx-auto px-8 mb-32 flex flex-col lg:flex-row gap-16">
+<div class="lg:w-1/2">
+<h2 class="font-headline text-4xl font-bold mb-8 tracking-tighter">THE NEURAL <br/>STABILIZER <span class="text-tertiary">LOGIC</span></h2>
+<div class="space-y-6">
+<p class="text-on-surface-variant leading-relaxed">
+                        We implemented a hierarchical reinforcement learning (HRL) architecture. The "Commander" layer sets long-term environmental targets, while the "Worker" layer manages millisecond-level valve adjustments.
+                    </p>
+<div class="p-6 bg-surface-container-highest/30 backdrop-blur-md rounded-xl border border-outline-variant/10">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-tertiary">code</span>
+<span class="font-label text-[10px] uppercase tracking-widest">Model Initialization Script</span>
+</div>
+<pre class="font-mono text-[12px] text-tertiary/80 leading-relaxed overflow-x-auto no-scrollbar">class MartianNet(nn.Module):
+    def __init__(self, input_dim=512):
+        super().__init__()
+        self.encoder = nn.TransformerEncoder(
+            nn.TransformerEncoderLayer(d_model=input_dim, nhead=8),
+            num_layers=6
+        )
+        self.policy_head = nn.Linear(input_dim, 24)
+        
+    def forward(self, telemetry):
+        features = self.encoder(telemetry)
+        return torch.softmax(self.policy_head(features), dim=-1)
+                        </pre>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2 flex items-center justify-center relative">
+<div class="absolute w-64 h-64 bg-primary/10 blur-[100px] -z-10"></div>
+<div class="w-full aspect-square border border-outline-variant/20 rounded-xl relative overflow-hidden group p-8 flex flex-col justify-center bg-surface-container-low">
+<div class="grid grid-cols-6 gap-2">
+<!-- Simulated Data Grid -->
+<div class="h-20 bg-primary/20 rounded-sm"></div>
+<div class="h-20 bg-tertiary/20 rounded-sm"></div>
+<div class="h-20 bg-surface-container-highest rounded-sm"></div>
+<div class="h-20 bg-primary/40 rounded-sm"></div>
+<div class="h-20 bg-surface-container-highest rounded-sm"></div>
+<div class="h-20 bg-tertiary/10 rounded-sm"></div>
+<div class="h-20 bg-surface-container-highest rounded-sm"></div>
+<div class="h-20 bg-primary/10 rounded-sm"></div>
+<div class="h-20 bg-tertiary/40 rounded-sm"></div>
+<div class="h-20 bg-surface-container-highest rounded-sm"></div>
+<div class="h-20 bg-primary/20 rounded-sm"></div>
+<div class="h-20 bg-surface-container-highest rounded-sm"></div>
+<div class="h-20 bg-tertiary/20 rounded-sm"></div>
+<div class="h-20 bg-surface-container-highest rounded-sm"></div>
+<div class="h-20 bg-primary/60 rounded-sm"></div>
+<div class="h-20 bg-tertiary/10 rounded-sm"></div>
+<div class="h-20 bg-surface-container-highest rounded-sm"></div>
+<div class="h-20 bg-primary/20 rounded-sm"></div>
+</div>
+<div class="mt-8">
+<h4 class="font-headline text-lg mb-2">Multi-Node Telemetry Mapping</h4>
+<p class="text-xs text-on-surface-variant">Real-time visualization of sensor density across the Elysium Planitia habitat modules.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Outcomes & Results -->
+<section class="max-w-7xl mx-auto px-8 mb-32">
+<div class="p-12 bg-surface-container rounded-xl relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary/5 to-transparent"></div>
+<h2 class="font-headline text-3xl font-bold mb-12 uppercase tracking-tighter">Mission <span class="text-primary">Success</span></h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div>
+<span class="font-headline text-5xl font-bold text-primary tracking-tighter">98.4%</span>
+<p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mt-2">Prediction Accuracy</p>
+<p class="mt-4 text-sm text-on-surface-variant font-body">Stable forecast of atmospheric pressure shifts up to 4 hours in advance.</p>
+</div>
+<div>
+<span class="font-headline text-5xl font-bold text-tertiary tracking-tighter">-42%</span>
+<p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mt-2">Energy Consumption</p>
+<p class="mt-4 text-sm text-on-surface-variant font-body">Optimized motor usage by reducing frequency of micro-adjustments.</p>
+</div>
+<div>
+<span class="font-headline text-5xl font-bold text-on-surface tracking-tighter">Zero</span>
+<p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mt-2">Habitat Breaches</p>
+<p class="mt-4 text-sm text-on-surface-variant font-body">Complete elimination of pressure-induced structural stress failures.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Next Project Navigation -->
+<section class="max-w-7xl mx-auto px-8 pt-20 border-t border-outline-variant/20">
+<a class="group block" href="#">
+<span class="font-label text-xs uppercase tracking-[0.2em] text-on-surface-variant mb-4 block">Next Evolution</span>
+<div class="flex justify-between items-center">
+<h3 class="font-headline text-4xl md:text-6xl font-bold tracking-tighter group-hover:text-tertiary transition-colors">Quantum Swarm Robotics</h3>
+<span class="material-symbols-outlined text-4xl md:text-6xl group-hover:translate-x-4 transition-transform duration-300">arrow_forward</span>
+</div>
+</a>
+</section>
+</main>
+<!-- Footer Navigation Shell -->
+<footer class="bg-[#0e0e0e] w-full py-12 px-8 border-t border-[#ffffff]/10">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 max-w-7xl mx-auto">
+<div class="font-['Space_Grotesk'] uppercase text-[#ff8f78] font-bold">ProudMars</div>
+<div class="flex gap-8 font-['Inter'] text-sm tracking-normal">
+<a class="text-[#adaaaa] hover:text-[#ffffff] transition-colors hover:translate-y-[-2px] transition-transform" href="#">LinkedIn</a>
+<a class="text-[#adaaaa] hover:text-[#ffffff] transition-colors hover:translate-y-[-2px] transition-transform" href="#">Twitter</a>
+<a class="text-[#adaaaa] hover:text-[#ffffff] transition-colors hover:translate-y-[-2px] transition-transform" href="#">GitHub</a>
+<a class="text-[#81ecff] underline hover:text-[#ffffff] transition-colors hover:translate-y-[-2px] transition-transform" href="#">Newsletter Signup</a>
+</div>
+<div class="text-[#adaaaa] font-['Inter'] text-xs uppercase tracking-widest">
+                © 2024 ProudMars. Built on the Martian Frontier.
+            </div>
+</div>
+</footer>
+</body></html>

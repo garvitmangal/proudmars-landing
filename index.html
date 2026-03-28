@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-container": "#004d57",
+              "surface-bright": "#2c2c2c",
+              "tertiary-fixed": "#00e3fd",
+              "secondary-fixed-dim": "#d6d4d3",
+              "on-error": "#490013",
+              "secondary-container": "#474746",
+              "on-primary-container": "#4c0600",
+              "inverse-surface": "#fcf8f8",
+              "on-secondary-fixed-variant": "#5c5b5b",
+              "on-tertiary-fixed-variant": "#005762",
+              "inverse-primary": "#bb1d00",
+              "outline-variant": "#484847",
+              "on-secondary-container": "#d2d0cf",
+              "on-tertiary-fixed": "#003840",
+              "primary-fixed": "#ff775d",
+              "surface-container": "#1a1919",
+              "tertiary-dim": "#00d4ec",
+              "tertiary-container": "#00e3fd",
+              "surface-variant": "#262626",
+              "on-secondary-fixed": "#403f3f",
+              "error-dim": "#d73357",
+              "primary": "#ff8f78",
+              "surface": "#0e0e0e",
+              "on-secondary": "#525151",
+              "primary-fixed-dim": "#ff5c3e",
+              "outline": "#777575",
+              "error": "#ff6e84",
+              "primary-container": "#ff775d",
+              "tertiary-fixed-dim": "#00d4ec",
+              "background": "#0e0e0e",
+              "surface-dim": "#0e0e0e",
+              "on-background": "#ffffff",
+              "on-surface-variant": "#adaaaa",
+              "secondary-dim": "#d6d4d3",
+              "on-error-container": "#ffb2b9",
+              "surface-container-low": "#131313",
+              "on-tertiary": "#005762",
+              "secondary": "#e5e2e1",
+              "tertiary": "#81ecff",
+              "on-primary-fixed-variant": "#5d0900",
+              "secondary-fixed": "#e5e2e1",
+              "on-primary": "#610a00",
+              "surface-container-lowest": "#000000",
+              "surface-container-highest": "#262626",
+              "surface-container-high": "#201f1f",
+              "on-primary-fixed": "#000000",
+              "on-surface": "#ffffff",
+              "surface-tint": "#ff8f78",
+              "primary-dim": "#ff7257",
+              "inverse-on-surface": "#565554",
+              "error-container": "#a70138"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(255, 143, 120, 0.05) 0%, transparent 70%);
+        }
+        .glass-card {
+            backdrop-filter: blur(12px);
+            background: rgba(26, 25, 25, 0.6);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0e0e0e]/80 backdrop-blur-xl bg-gradient-to-b from-[#0e0e0e] to-transparent">
+<div class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+<div class="text-2xl font-bold font-['Space_Grotesk'] text-[#ff8f78] tracking-tighter">
+                ProudMars
+            </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-[#ff8f78] font-bold border-b-2 border-[#ff8f78] pb-1 font-['Space_Grotesk'] uppercase tracking-wider text-[0.75rem]" href="#">Home</a>
+<a class="text-[#adaaaa] hover:text-[#ffffff] transition-colors font-['Space_Grotesk'] uppercase tracking-wider text-[0.75rem]" href="#">Portfolio</a>
+<a class="text-[#adaaaa] hover:text-[#ffffff] transition-colors font-['Space_Grotesk'] uppercase tracking-wider text-[0.75rem]" href="#">Blog</a>
+<a class="text-[#adaaaa] hover:text-[#ffffff] transition-colors font-['Space_Grotesk'] uppercase tracking-wider text-[0.75rem]" href="#">About</a>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary-container px-6 py-2 rounded font-headline font-bold text-sm tracking-tight active:scale-95 transition-all duration-300 shadow-[0_0_20px_rgba(255,143,120,0.2)] hover:shadow-[0_0_30px_rgba(255,143,120,0.4)]">
+                Get in Touch
+            </button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Futuristic Martian Landscape with AI Node Structures" class="w-full h-full object-cover opacity-40 mix-blend-luminosity" data-alt="Futuristic Martian landscape with glowing AI neural structures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjVW7-ByOqUSWshenl4sS7bk90WYcODuMkd51na7CXToUinagCVNJhTRR_fczkva6aTENw4aaKMIdRwwKh_hP8zwCHvb8YrBL_Sw1aHZ6FDTPthmySNf29gi2TIiIkSjnWuHZNYlL1iog-jvX-7lI0whDFD5D3OgpwaTxmlKaOsvHR9B_vU55TV7WzJzQQiS1EKm0o9ECiQVdsqK2LUlffbE6Wjz_PFcCA82bGBro4vVmgiXszTtXLj84ccTm4s6aSuoF_F4EUBF4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-tertiary-container/10 border border-tertiary/20 mb-6">
+<span class="material-symbols-outlined text-tertiary text-sm" style="font-variation-settings: 'FILL' 1;">memory</span>
+<span class="font-label text-[0.65rem] uppercase tracking-widest text-tertiary">Freelance AI &amp; Machine Learning Engineering</span>
+</div>
+<h1 class="font-headline text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 leading-[0.9]">
+                        Building the Future <br/> of <span class="text-primary">Intelligence</span>
+</h1>
+<p class="font-body text-lg md:text-xl text-on-surface-variant max-w-2xl mb-10 leading-relaxed">
+                        Precision engineering for the neural frontier. Delivering bespoke AI model development, high-fidelity data analysis, and predictive infrastructure for the world's most ambitious ventures.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="px-8 py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-headline font-bold rounded shadow-lg hover:translate-y-[-2px] transition-transform">
+                            Hire the Future
+                        </button>
+<button class="px-8 py-4 border border-outline-variant text-on-surface font-headline font-bold rounded hover:bg-surface-container transition-colors">
+                            Explore Labs
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Services -->
+<section class="py-32 bg-surface-dim relative">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div>
+<span class="font-label text-tertiary uppercase tracking-[0.2em] text-xs mb-4 block">Capabilities</span>
+<h2 class="font-headline text-4xl md:text-5xl font-bold">The Technical Core</h2>
+</div>
+<p class="font-body text-on-surface-variant max-w-md">
+                        Advanced computational strategies tailored for specific operational domains, from zero-shot learning to time-series forecasting.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-1">
+<!-- Service 1 -->
+<div class="group bg-surface-container-low p-10 border-l-4 border-primary transition-all hover:bg-surface-container">
+<span class="material-symbols-outlined text-4xl text-primary mb-8">psychology</span>
+<h3 class="font-headline text-2xl font-bold mb-4">AI Model Development</h3>
+<p class="font-body text-on-surface-variant mb-8 text-sm leading-relaxed">
+                            Custom neural architecture design including LLM fine-tuning, computer vision systems, and reinforcement learning environments.
+                        </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-tertiary-container/5 rounded-full font-label text-[0.6rem] text-tertiary uppercase tracking-wider">PyTorch</span>
+<span class="px-3 py-1 bg-tertiary-container/5 rounded-full font-label text-[0.6rem] text-tertiary uppercase tracking-wider">Transformers</span>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="group bg-surface-container p-10 border-l-4 border-tertiary transition-all hover:bg-surface-container-high">
+<span class="material-symbols-outlined text-4xl text-tertiary mb-8">query_stats</span>
+<h3 class="font-headline text-2xl font-bold mb-4">Data Analysis</h3>
+<p class="font-body text-on-surface-variant mb-8 text-sm leading-relaxed">
+                            Transforming raw Martian noise into crystalline intelligence through statistical modeling and automated insight extraction.
+                        </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-tertiary-container/5 rounded-full font-label text-[0.6rem] text-tertiary uppercase tracking-wider">Pandas</span>
+<span class="px-3 py-1 bg-tertiary-container/5 rounded-full font-label text-[0.6rem] text-tertiary uppercase tracking-wider">BigQuery</span>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="group bg-surface-container-low p-10 border-l-4 border-primary transition-all hover:bg-surface-container">
+<span class="material-symbols-outlined text-4xl text-primary mb-8">timeline</span>
+<h3 class="font-headline text-2xl font-bold mb-4">Predictive Modeling</h3>
+<p class="font-body text-on-surface-variant mb-8 text-sm leading-relaxed">
+                            Forecasting complex systems with probabilistic frameworks to mitigate risk and identify emergent market opportunities.
+                        </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-tertiary-container/5 rounded-full font-label text-[0.6rem] text-tertiary uppercase tracking-wider">XGBoost</span>
+<span class="px-3 py-1 bg-tertiary-container/5 rounded-full font-label text-[0.6rem] text-tertiary uppercase tracking-wider">Scikit-Learn</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Work - Bento Grid -->
+<section class="py-32 bg-surface">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-16">
+<h2 class="font-headline text-4xl font-bold mb-4">Field Deployments</h2>
+<div class="h-1 w-24 bg-primary"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Project 1 -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl h-[450px]">
+<img alt="Cybersecurity AI Interface" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Abstract cybersecurity AI interface with circuit patterns" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqJqVc4AadKCpM2opNViLOQwkQ3x1bKmAWYc555zREKz2GqzPf2D6i2T4xnRniObOPEML5OKrWjTU27oRdQCWUdNpxWA3Uayo5BMsIQTLhvAYlyRhQ5DmJZ1wT4BZ_Ijs2oVHWNJ28IThZ4gSaOnAxGsJh_f6SuBQZMP57WuemNJIT69q7UhGbs-oUel59B61r7ab02wNHvVwCsqBdMMvYHhx97-rFfAsurzpLbFCedpHQGTt_gr1FHT8h7HMrjj-RWPHSsPHWer0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10">
+<span class="font-label text-tertiary text-xs tracking-widest uppercase mb-2 block">Case Study 01</span>
+<h3 class="font-headline text-3xl font-bold text-white mb-4">Project: Sentinel.AI</h3>
+<p class="font-body text-white/70 max-w-md mb-6">Autonomous threat detection system for decentralized financial protocols.</p>
+<a class="inline-flex items-center gap-2 text-primary font-bold group" href="#">
+                                View Report <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl h-[450px] bg-surface-container">
+<img alt="Satellite Data Visualization" class="absolute inset-0 w-full h-full object-cover opacity-60 transition-transform duration-700 group-hover:scale-110" data-alt="Satellite earth imagery with data overlays" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYFZl6jgGXIKKVGVqhcKfol7rI766IJ0tvd45torA4CcIoJ4Yw8sGfEbrAhiXmIhyo9a12qSZEcyYcWOeOdndqaPVgw7ngJukLm2Whb7idlOO-oDZ1uIBd5051LunTs3xDiUWIKXNObpqaDA5rFHNxh0ZU41ckXnX4hRrBw24R7QZRCY1I6h7h5IeMvUVhsKVWT3KgoFPiK4sF0_dkPlxigidgylH9Jk-m8YRdoStGUlrzSYQVLwkX1nAfGfuSAPVV1mPh-Rl3b7I"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-highest via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10">
+<span class="font-label text-tertiary text-xs tracking-widest uppercase mb-2 block">Case Study 02</span>
+<h3 class="font-headline text-2xl font-bold mb-4">Orbital Mesh</h3>
+<p class="font-body text-on-surface-variant text-sm mb-6">Hyperspectral imagery analysis for terraforming simulations.</p>
+<a class="inline-flex items-center gap-2 text-primary font-bold" href="#">
+                                Analyze <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Strong CTA Section -->
+<section class="py-40 relative overflow-hidden">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-primary/10 rounded-full blur-[120px] -z-10"></div>
+<div class="max-w-4xl mx-auto px-8 text-center">
+<h2 class="font-headline text-5xl md:text-7xl font-bold mb-8 tracking-tighter">Ready to accelerate your <span class="text-tertiary">Intelligence?</span></h2>
+<p class="font-body text-on-surface-variant text-xl mb-12 max-w-2xl mx-auto">
+                    Limited freelance availability for Q4 2024. Secure a dedicated engineering partner for your most complex AI challenges.
+                </p>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<button class="px-12 py-5 bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-headline font-bold text-lg rounded-xl shadow-2xl hover:scale-105 transition-transform">
+                        Get a Free AI Consultation
+                    </button>
+</div>
+<div class="mt-12 flex justify-center items-center gap-8 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+<span class="material-symbols-outlined text-4xl">database</span>
+<span class="material-symbols-outlined text-4xl">hub</span>
+<span class="material-symbols-outlined text-4xl">settings_input_component</span>
+<span class="material-symbols-outlined text-4xl">cloud_sync</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0e0e0e] w-full py-12 px-8 border-t border-[#ffffff]/10">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 max-w-7xl mx-auto">
+<div class="flex flex-col items-center md:items-start gap-2">
+<div class="font-['Space_Grotesk'] uppercase text-[#ff8f78] font-bold text-xl">ProudMars</div>
+<p class="font-['Inter'] text-sm tracking-normal text-[#adaaaa] max-w-[200px] text-center md:text-left">
+                    Engineering intelligence on the frontier.
+                </p>
+</div>
+<div class="flex gap-8">
+<a class="font-['Inter'] text-sm tracking-normal text-[#adaaaa] hover:text-[#ffffff] transition-colors hover:translate-y-[-2px] transition-transform" href="#">LinkedIn</a>
+<a class="font-['Inter'] text-sm tracking-normal text-[#adaaaa] hover:text-[#ffffff] transition-colors hover:translate-y-[-2px] transition-transform" href="#">Twitter</a>
+<a class="font-['Inter'] text-sm tracking-normal text-[#adaaaa] hover:text-[#ffffff] transition-colors hover:translate-y-[-2px] transition-transform" href="#">GitHub</a>
+<a class="font-['Inter'] text-sm tracking-normal text-[#81ecff] underline hover:text-[#ffffff] transition-colors hover:translate-y-[-2px] transition-transform" href="#">Newsletter Signup</a>
+</div>
+<div class="font-['Inter'] text-sm tracking-normal text-[#adaaaa]">
+                © 2024 ProudMars. Built on the Martian Frontier.
+            </div>
+</div>
+</footer>
+</body></html>

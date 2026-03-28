@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About &amp; Contact | ProudMars</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-container": "#004d57",
+              "surface-bright": "#2c2c2c",
+              "tertiary-fixed": "#00e3fd",
+              "secondary-fixed-dim": "#d6d4d3",
+              "on-error": "#490013",
+              "secondary-container": "#474746",
+              "on-primary-container": "#4c0600",
+              "inverse-surface": "#fcf8f8",
+              "on-secondary-fixed-variant": "#5c5b5b",
+              "on-tertiary-fixed-variant": "#005762",
+              "inverse-primary": "#bb1d00",
+              "outline-variant": "#484847",
+              "on-secondary-container": "#d2d0cf",
+              "on-tertiary-fixed": "#003840",
+              "primary-fixed": "#ff775d",
+              "surface-container": "#1a1919",
+              "tertiary-dim": "#00d4ec",
+              "tertiary-container": "#00e3fd",
+              "surface-variant": "#262626",
+              "on-secondary-fixed": "#403f3f",
+              "error-dim": "#d73357",
+              "primary": "#ff8f78",
+              "surface": "#0e0e0e",
+              "on-secondary": "#525151",
+              "primary-fixed-dim": "#ff5c3e",
+              "outline": "#777575",
+              "error": "#ff6e84",
+              "primary-container": "#ff775d",
+              "tertiary-fixed-dim": "#00d4ec",
+              "background": "#0e0e0e",
+              "surface-dim": "#0e0e0e",
+              "on-background": "#ffffff",
+              "on-surface-variant": "#adaaaa",
+              "secondary-dim": "#d6d4d3",
+              "on-error-container": "#ffb2b9",
+              "surface-container-low": "#131313",
+              "on-tertiary": "#005762",
+              "secondary": "#e5e2e1",
+              "tertiary": "#81ecff",
+              "on-primary-fixed-variant": "#5d0900",
+              "secondary-fixed": "#e5e2e1",
+              "on-primary": "#610a00",
+              "surface-container-lowest": "#000000",
+              "surface-container-highest": "#262626",
+              "surface-container-high": "#201f1f",
+              "on-primary-fixed": "#000000",
+              "on-surface": "#ffffff",
+              "surface-tint": "#ff8f78",
+              "primary-dim": "#ff7257",
+              "inverse-on-surface": "#565554",
+              "error-container": "#a70138"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(45deg, #ff8f78 0%, #ff775d 100%);
+        }
+        .glass-card {
+            backdrop-filter: blur(12px);
+            background: rgba(26, 25, 25, 0.7);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0e0e0e]/80 backdrop-blur-xl bg-gradient-to-b from-[#0e0e0e] to-transparent">
+<div class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+<div class="text-2xl font-bold font-['Space_Grotesk'] text-[#ff8f78] tracking-tighter">ProudMars</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#adaaaa] hover:text-[#ffffff] transition-colors font-['Space_Grotesk'] uppercase tracking-wider text-[0.75rem]" href="#">Home</a>
+<a class="text-[#adaaaa] hover:text-[#ffffff] transition-colors font-['Space_Grotesk'] uppercase tracking-wider text-[0.75rem]" href="#">Portfolio</a>
+<a class="text-[#adaaaa] hover:text-[#ffffff] transition-colors font-['Space_Grotesk'] uppercase tracking-wider text-[0.75rem]" href="#">Blog</a>
+<a class="text-[#ff8f78] font-bold border-b-2 border-[#ff8f78] pb-1 font-['Space_Grotesk'] uppercase tracking-wider text-[0.75rem]" href="#">About</a>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-container px-6 py-2 rounded-md font-label uppercase text-[0.75rem] font-bold tracking-widest hover:shadow-[0_0_20px_rgba(255,143,120,0.4)] transition-all active:scale-95">
+                Get in Touch
+            </button>
+</div>
+</nav>
+<main class="pt-32 pb-20">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-8 mb-32">
+<div class="relative flex flex-col md:flex-row items-center gap-16">
+<div class="flex-1 order-2 md:order-1">
+<span class="font-label text-tertiary uppercase tracking-[0.2em] text-xs mb-4 block">The Mission</span>
+<h1 class="font-headline text-5xl md:text-7xl font-bold tracking-tighter leading-none mb-8">
+                        Work with the <span class="text-primary italic">Martian</span> intelligence.
+                    </h1>
+<p class="text-on-surface-variant text-lg max-w-xl leading-relaxed">
+                        Forging the future of data and machine learning from the digital frontier. ProudMars is an independent AI studio dedicated to architectural precision and technical authority.
+                    </p>
+</div>
+<div class="flex-1 order-1 md:order-2 w-full aspect-square relative overflow-hidden rounded-xl bg-surface-container-low group">
+<img alt="Abstract digital landscape" class="w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 transition-all duration-700" data-alt="Abstract Martian-like digital topography with glowing lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4X01Bl5-Kg7_4owagnE5GNPomLoKAVjBRXB-ex6CfXmgLcOSNJMf2W8k_Vg-sf3nxo5CO_kh9vJPfMY5kOUILDem84L57SKyoKGSBgEallPgx98kWCaz4w9Z--tjGZvw5YRikk99iYzjpMCSrZ8hNkMhozLTkza4jpUi2vd6EbTFgs_nC4dmzqC7_xWSvlamOdkX1WLcDIs4xhtLghfGXqrkjhc_xDF3okInKAATBcKd8WSVsDFpY2ytBuSY1eyEh8al7HQj5fLM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8">
+<div class="h-1 w-24 bg-primary mb-4"></div>
+<p class="font-label text-xs uppercase tracking-widest text-on-surface">Sector: AI Frontiers</p>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section (Bento Grid) -->
+<section class="max-w-7xl mx-auto px-8 mb-40">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+<div class="md:col-span-8 bg-surface-container-low p-10 rounded-xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-8">
+<span class="material-symbols-outlined text-tertiary/20 text-8xl" data-icon="memory">memory</span>
+</div>
+<h2 class="font-headline text-3xl font-bold mb-6 text-primary">The Origin</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-2xl">
+                        Founded by a rogue data scientist with a vision to terraform complex datasets into habitable business insights. ProudMars bridges the gap between raw algorithmic power and human-centric design. With a background in deep learning and neural architectures, I build systems that don't just calculate—they evolve.
+                    </p>
+</div>
+<div class="md:col-span-4 bg-surface-container p-10 rounded-xl border-l-4 border-tertiary">
+<h3 class="font-label text-xs uppercase tracking-widest mb-6 text-on-surface-variant">Core Protocol</h3>
+<ul class="space-y-4">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="bolt">bolt</span>
+<span class="text-sm">High-Frequency Iteration</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="shield">shield</span>
+<span class="text-sm">Ethical AI Frameworks</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="architecture">architecture</span>
+<span class="text-sm">Technical Precision</span>
+</li>
+</ul>
+</div>
+<div class="md:col-span-4 bg-surface-container-high p-8 rounded-xl flex flex-col justify-between">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="rocket_launch">rocket_launch</span>
+<div>
+<h3 class="font-headline text-xl font-bold mb-2">The Vision</h3>
+<p class="text-on-surface-variant text-sm">To establish the standard for the next generation of Martian-grade intelligent interfaces.</p>
+</div>
+</div>
+<div class="md:col-span-8 bg-surface-container p-8 rounded-xl flex flex-col md:flex-row items-center gap-8">
+<div class="flex-1">
+<h3 class="font-headline text-xl font-bold mb-4">Neural Infrastructure</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-full bg-tertiary-container/10 text-tertiary text-[10px] font-label uppercase tracking-widest border border-tertiary/20">Tensorflow</span>
+<span class="px-3 py-1 rounded-full bg-tertiary-container/10 text-tertiary text-[10px] font-label uppercase tracking-widest border border-tertiary/20">PyTorch</span>
+<span class="px-3 py-1 rounded-full bg-tertiary-container/10 text-tertiary text-[10px] font-label uppercase tracking-widest border border-tertiary/20">Transformers</span>
+<span class="px-3 py-1 rounded-full bg-tertiary-container/10 text-tertiary text-[10px] font-label uppercase tracking-widest border border-tertiary/20">Computer Vision</span>
+</div>
+</div>
+<div class="w-32 h-32 rounded-full border-2 border-dashed border-outline-variant flex items-center justify-center p-2">
+<div class="w-full h-full rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="hub" data-weight="fill" style="font-variation-settings: 'FILL' 1;">hub</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-20">
+<div>
+<h2 class="font-headline text-4xl font-bold mb-8 tracking-tight">Initiate Transmission</h2>
+<p class="text-on-surface-variant mb-12 max-w-md">Have a project that requires high-energy signal processing or AI integration? Let's build the future together.</p>
+<div class="space-y-8">
+<div class="flex items-start gap-6 group">
+<div class="w-12 h-12 bg-surface-container rounded flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="alternate_email">alternate_email</span>
+</div>
+<div>
+<p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">Email</p>
+<p class="font-headline font-bold text-lg">hello@proudmars.ai</p>
+</div>
+</div>
+<div class="flex items-start gap-6 group">
+<div class="w-12 h-12 bg-surface-container rounded flex items-center justify-center group-hover:bg-tertiary/10 transition-colors">
+<span class="material-symbols-outlined text-tertiary" data-icon="location_on">location_on</span>
+</div>
+<div>
+<p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">Headquarters</p>
+<p class="font-headline font-bold text-lg">Digital Nomad (Currently: Mars North Pole)</p>
+</div>
+</div>
+</div>
+<div class="mt-16 pt-12 border-t border-outline-variant/30">
+<p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-6">Social Grid</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-outline-variant flex items-center justify-center rounded hover:border-primary hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="share">share</span>
+</a>
+<a class="w-10 h-10 border border-outline-variant flex items-center justify-center rounded hover:border-primary hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="code">code</span>
+</a>
+<a class="w-10 h-10 border border-outline-variant flex items-center justify-center rounded hover:border-primary hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="campaign">campaign</span>
+</a>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 md:p-12 rounded-xl relative overflow-hidden">
+<!-- Ghost border accent -->
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<form class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="relative group">
+<input class="peer w-full bg-transparent border-0 border-b border-outline-variant py-2 focus:ring-0 focus:border-tertiary transition-all" id="name" placeholder=" " type="text"/>
+<label class="absolute left-0 top-2 font-label text-[10px] uppercase tracking-widest text-on-surface-variant transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-focus:-top-4 peer-focus:text-tertiary peer-focus:text-[10px]" for="name">Your Name</label>
+</div>
+<div class="relative group">
+<input class="peer w-full bg-transparent border-0 border-b border-outline-variant py-2 focus:ring-0 focus:border-tertiary transition-all" id="email" placeholder=" " type="email"/>
+<label class="absolute left-0 top-2 font-label text-[10px] uppercase tracking-widest text-on-surface-variant transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-focus:-top-4 peer-focus:text-tertiary peer-focus:text-[10px]" for="email">Email Address</label>
+</div>
+</div>
+<div class="relative group">
+<select class="peer w-full bg-transparent border-0 border-b border-outline-variant py-2 focus:ring-0 focus:border-tertiary transition-all appearance-none cursor-pointer" id="project">
+<option class="bg-surface text-on-surface">AI Model Development</option>
+<option class="bg-surface text-on-surface">Data Visualization</option>
+<option class="bg-surface text-on-surface">MLOps Consulting</option>
+<option class="bg-surface text-on-surface">Other Martian Tech</option>
+</select>
+<label class="absolute -top-4 left-0 font-label text-[10px] uppercase tracking-widest text-tertiary" for="project">Project Type</label>
+</div>
+<div class="relative group">
+<textarea class="peer w-full bg-transparent border-0 border-b border-outline-variant py-2 focus:ring-0 focus:border-tertiary transition-all resize-none" id="message" placeholder=" " rows="4"></textarea>
+<label class="absolute left-0 top-2 font-label text-[10px] uppercase tracking-widest text-on-surface-variant transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-focus:-top-4 peer-focus:text-tertiary peer-focus:text-[10px]" for="message">Project Transmission</label>
+</div>
+<button class="w-full bg-gradient-to-r from-primary to-primary-container py-4 rounded-md font-label uppercase text-sm font-bold tracking-[0.2em] hover:shadow-[0_0_30px_rgba(255,143,120,0.3)] transition-all flex items-center justify-center gap-3" type="submit">
+<span class="material-symbols-outlined" data-icon="send">send</span>
+                        Transmit Payload
+                    </button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 border-t border-[#ffffff]/10 bg-[#0e0e0e]">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 max-w-7xl mx-auto">
+<div class="font-['Space_Grotesk'] uppercase text-[#ff8f78] font-bold">ProudMars</div>
+<p class="font-['Inter'] text-sm tracking-normal text-[#adaaaa]">© 2024 ProudMars. Built on the Martian Frontier.</p>
+<div class="flex gap-6">
+<a class="text-[#adaaaa] hover:text-[#ffffff] transition-colors font-['Inter'] text-sm tracking-normal hover:translate-y-[-2px] transition-transform" href="#">LinkedIn</a>
+<a class="text-[#adaaaa] hover:text-[#ffffff] transition-colors font-['Inter'] text-sm tracking-normal hover:translate-y-[-2px] transition-transform" href="#">Twitter</a>
+<a class="text-[#adaaaa] hover:text-[#ffffff] transition-colors font-['Inter'] text-sm tracking-normal hover:translate-y-[-2px] transition-transform" href="#">GitHub</a>
+<a class="text-[#81ecff] underline font-['Inter'] text-sm tracking-normal hover:translate-y-[-2px] transition-transform" href="#">Newsletter Signup</a>
+</div>
+</div>
+</footer>
+</body></html>
