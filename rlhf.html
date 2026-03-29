@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RLHF for Recommendation Engines: Aligning Search Relevance</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-highest": "#262626",
+              "tertiary-dim": "#00d4ec",
+              "surface-container": "#1a1919",
+              "background": "#0e0e0e",
+              "outline": "#777575",
+              "on-secondary-fixed-variant": "#5c5b5b",
+              "on-tertiary-fixed": "#003840",
+              "primary-container": "#ff775d",
+              "error-container": "#a70138",
+              "surface-container-low": "#131313",
+              "on-tertiary-fixed-variant": "#005762",
+              "outline-variant": "#484847",
+              "tertiary-container": "#00e3fd",
+              "on-primary-fixed-variant": "#5d0900",
+              "on-error": "#490013",
+              "inverse-surface": "#fcf8f8",
+              "secondary-dim": "#d6d4d3",
+              "tertiary-fixed": "#00e3fd",
+              "inverse-primary": "#bb1d00",
+              "on-secondary-fixed": "#403f3f",
+              "inverse-on-surface": "#565554",
+              "surface-container-high": "#201f1f",
+              "primary-fixed": "#ff775d",
+              "surface": "#0e0e0e",
+              "secondary": "#e5e2e1",
+              "surface-bright": "#2c2c2c",
+              "surface-dim": "#0e0e0e",
+              "on-background": "#ffffff",
+              "on-secondary-container": "#d2d0cf",
+              "on-primary-container": "#4c0600",
+              "surface-container-lowest": "#000000",
+              "on-primary": "#610a00",
+              "on-error-container": "#ffb2b9",
+              "error": "#ff6e84",
+              "secondary-container": "#474746",
+              "tertiary": "#81ecff",
+              "tertiary-fixed-dim": "#00d4ec",
+              "surface-variant": "#262626",
+              "on-surface-variant": "#adaaaa",
+              "error-dim": "#d73357",
+              "secondary-fixed-dim": "#d6d4d3",
+              "on-tertiary-container": "#004d57",
+              "on-secondary": "#525151",
+              "on-tertiary": "#005762",
+              "primary-dim": "#ff7257",
+              "on-primary-fixed": "#000000",
+              "surface-tint": "#ff8f78",
+              "secondary-fixed": "#e5e2e1",
+              "on-surface": "#ffffff",
+              "primary-fixed-dim": "#ff5c3e",
+              "primary": "#ff8f78"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #0e0e0e; color: #ffffff; }
+        .font-space { font-family: 'Space Grotesk', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-card { background: rgba(26, 25, 25, 0.6); backdrop-filter: blur(12px); }
+        code { font-family: 'Courier New', Courier, monospace; color: #81ecff; }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0e0e0e]/80 backdrop-blur-xl bg-gradient-to-b from-[#0e0e0e] to-transparent">
+<div class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+<div class="text-2xl font-bold font-['Space_Grotesk'] text-[#ff8f78] tracking-tighter">ProudEngine</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-[#adaaaa] hover:text-[#ffffff] transition-colors font-['Space_Grotesk'] uppercase tracking-wider text-[0.75rem]" href="/">Home</a>
+<!-- <a class="text-[#ff8f78] font-bold border-b-2 border-[#ff8f78] pb-1 font-['Space_Grotesk'] uppercase tracking-wider text-[0.75rem]" href="#">Portfolio</a> -->
+<!-- <a class="text-[#adaaaa] hover:text-[#ffffff] transition-colors font-['Space_Grotesk'] uppercase tracking-wider text-[0.75rem]" href="#">Blog</a> -->
+<a class="text-[#adaaaa] hover:text-[#ffffff] transition-colors font-['Space_Grotesk'] uppercase tracking-wider text-[0.75rem]" href="/contact.html">About</a>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-headline font-bold py-2 px-6 rounded-md hover:shadow-[0_0_20px_rgba(255,143,120,0.4)] transition-all active:scale-95 duration-200">
+                Get in Touch
+            </button>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<header class="mb-20">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div class="max-w-3xl">
+<span class="font-headline uppercase tracking-widest text-primary text-sm mb-4 block">Project Case Study</span>
+<h1 class="text-5xl md:text-7xl font-headline font-bold leading-tight tracking-tighter text-on-surface">
+                        RLHF for Recommendation Engines: <span class="text-tertiary">Optimizing</span> Search Relevance.
+                    </h1>
+</div>
+<div class="flex flex-col gap-2 border-l-4 border-primary pl-6 py-2">
+<p class="font-label uppercase text-[0.7rem] tracking-widest text-on-surface-variant">Sector</p>
+<p class="font-headline font-bold text-xl">Search &amp; Information Retrieval</p>
+</div>
+</div>
+</header>
+<!-- Hero Visual (Bento Style) -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-24">
+<div class="md:col-span-8 h-[500px] relative overflow-hidden rounded-xl">
+<img alt="RLHF visualization with human profiles and glowing data nodes" class="w-full h-full object-cover" data-alt="Data visualization of a reward model curve showing the alignment of model predictions with human-ranked preference clusters" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEOPmJ8KWhulsFtH0Rh6mGA60H-I4uI3-AQM4qpcv9t8LEQbrFnAqpXpTqlxaAhE-25c4xBNRFkbL2KNWaQD2f88TVSOpD68aKbUqbtdZlHLMNRDqMx2i3n63WCc0oVdwBN-Ag-IU3ZbJaKCiv1ce0fs7qyoAt-EdTd24eDfNAAIsKcoAbiIJgTToCorVHtCz7w4xC-hPTamdK4BierrwhERTYB4fv7Y4RKft_4m0U3StF8P9AeM0IJA6k1ZXYkzYkz84jlOpY3FI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8">
+<div class="bg-surface-container/80 backdrop-blur-md p-4 border-l-2 border-tertiary">
+<p class="font-label text-xs uppercase tracking-tighter text-tertiary">Policy Optimization</p>
+<p class="font-body text-sm text-on-surface-variant">Defining reward signals for dense vector retrieval models.</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-4 grid grid-rows-2 gap-6">
+<div class="bg-surface-container-high p-8 flex flex-col justify-center rounded-xl relative overflow-hidden group">
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-colors"></div>
+<p class="font-label uppercase text-[0.65rem] tracking-widest text-primary mb-2">Alignment Status</p>
+<h3 class="font-headline text-3xl font-bold mb-4">Preference Scaling</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Reward Models (RM) continuously mapping noisy click-stream data into high-fidelity human preference signals.</p>
+</div>
+<div class="bg-surface-container-highest p-8 flex flex-col justify-center rounded-xl border-b-4 border-tertiary">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-tertiary text-4xl">thumbs_up_down</span>
+<p class="font-headline font-bold text-2xl text-tertiary">94% Preference Win-Rate</p>
+</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Models fine-tuned with PPO significantly outperform traditional click-based ranking algorithms.</p>
+</div>
+</div>
+</section>
+<!-- Content Grid: Challenge & Solution -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-20 mb-32 items-start">
+<div>
+<h2 class="font-headline text-4xl font-bold mb-8 flex items-center gap-4">
+<span class="w-12 h-[1px] bg-primary"></span> The Challenge
+                </h2>
+<div class="space-y-6 text-lg text-on-surface-variant leading-relaxed font-body">
+<p>Aligning recommendation model outputs with subjective human preferences for "relevance" and "quality" in a sea of noisy interaction data is a fundamental challenge. Traditional metrics like Click-Through Rate (CTR) often favor clickbait over true utility.</p>
+<p>In high-stakes information retrieval, identifying the nuanced difference between a popular result and a truly relevant one is critical. We needed a framework capable of capturing "latent quality" that standard supervised learning often ignores.</p>
+</div>
+<div class="mt-12 grid grid-cols-2 gap-6">
+<div class="p-6 bg-surface-container-low border-l-2 border-outline-variant">
+<span class="material-symbols-outlined text-error mb-4">noise_control_off</span>
+<p class="font-headline font-bold">Signal Noise</p>
+<p class="text-xs text-on-surface-variant mt-2 font-body">High volume of accidental clicks and bot-driven interactions skewing reward signals.</p>
+</div>
+<div class="p-6 bg-surface-container-low border-l-2 border-outline-variant">
+<span class="material-symbols-outlined text-error mb-4">search_off</span>
+<p class="font-headline font-bold">Dead-End Queries</p>
+<p class="text-xs text-on-surface-variant mt-2 font-body">22% of queries result in zero relevant interactions despite high model confidence.</p>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -inset-4 bg-tertiary/5 blur-2xl rounded-full"></div>
+<div class="glass-card p-10 rounded-xl relative z-10 border border-white/5">
+<h2 class="font-headline text-4xl font-bold mb-8 text-tertiary">The Solution</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-8">
+                        We implemented a Reward Model (RM) trained on human-ranked preferences to fine-tune the recommendation policy using Proximal Policy Optimization (PPO).
+                    </p>
+<ul class="space-y-6">
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-tertiary">psychology</span>
+<div>
+<p class="font-headline font-bold text-on-surface">Reward Model Training</p>
+<p class="text-sm text-on-surface-variant">Training a Bradley-Terry model on pairwise preferences to predict human satisfaction scores.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-tertiary">reorder</span>
+<div>
+<p class="font-headline font-bold text-on-surface">Policy Fine-Tuning (PPO)</p>
+<p class="text-sm text-on-surface-variant">Optimizing retrieval policy to maximize predicted reward while maintaining KL-divergence constraints.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="mt-10 rounded-xl overflow-hidden aspect-video bg-surface-container-high p-6">
+<pre class="text-[0.7rem] leading-tight overflow-hidden text-tertiary"><code>def compute_reward(policy_output, reward_model, ref_policy):
+    # Get reward from RM
+    r = reward_model(policy_output)
+    
+    # KL-Divergence penalty to prevent policy collapse
+    kl_div = torch.log(policy_output / ref_policy)
+    reward = r - beta * kl_div
+    
+    return reward.mean()
+
+# Optimization Step
+optimizer.step(ppo_loss(policy, data, reward))</code></pre>
+</div>
+</div>
+</section>
+<!-- Technical Infrastructure Section -->
+<section class="mb-32">
+<div class="bg-surface-container-low p-12 rounded-xl border-t border-white/5">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-6">
+<div>
+<h2 class="font-headline text-3xl font-bold tracking-tight">The Training Stack</h2>
+<p class="text-on-surface-variant mt-2 font-body">Accelerating the RLHF loop for real-time recommendation updates.</p>
+</div>
+<div class="flex flex-wrap gap-3">
+<span class="px-4 py-1.5 bg-tertiary-container/10 text-tertiary rounded-full font-label text-[0.65rem] tracking-widest uppercase border border-tertiary/20">PyTorch</span>
+<span class="px-4 py-1.5 bg-tertiary-container/10 text-tertiary rounded-full font-label text-[0.65rem] tracking-widest uppercase border border-tertiary/20">Ray RLlib</span>
+<span class="px-4 py-1.5 bg-tertiary-container/10 text-tertiary rounded-full font-label text-[0.65rem] tracking-widest uppercase border border-tertiary/20">Label Studio</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="p-8 bg-background/50 rounded-lg">
+<span class="material-symbols-outlined text-primary mb-4 text-3xl">group_work</span>
+<h4 class="font-headline font-bold mb-3">Human-in-the-loop</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Integration with high-throughput labeling interfaces to generate preference datasets at scale.</p>
+</div>
+<div class="p-8 bg-background/50 rounded-lg">
+<span class="material-symbols-outlined text-primary mb-4 text-3xl">model_training</span>
+<h4 class="font-headline font-bold mb-3">Policy Scaling</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Distributed training using Ray to synchronize policy updates across massive user-item interaction graphs.</p>
+</div>
+<div class="p-8 bg-background/50 rounded-lg">
+<span class="material-symbols-outlined text-primary mb-4 text-3xl">speed</span>
+<h4 class="font-headline font-bold mb-3">Latency-Aware RM</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Optimized reward model inference ensuring sub-50ms ranking updates for active user sessions.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Results / Metrics -->
+<section class="mb-32">
+<h2 class="font-headline text-4xl font-bold mb-16 text-center">Quantifiable Impact</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1">
+<div class="bg-surface-container p-10 flex flex-col items-center text-center">
+<p class="font-headline text-5xl font-bold text-primary mb-2">+14%</p>
+<p class="font-label uppercase text-[0.7rem] tracking-widest text-on-surface-variant">NDCG Improvement</p>
+</div>
+<div class="bg-surface-container p-10 flex flex-col items-center text-center">
+<p class="font-headline text-5xl font-bold text-tertiary mb-2">35%</p>
+<p class="font-label uppercase text-[0.7rem] tracking-widest text-on-surface-variant">Fewer Dead-Ends</p>
+</div>
+<div class="bg-surface-container p-10 flex flex-col items-center text-center">
+<p class="font-headline text-5xl font-bold text-primary mb-2">91%</p>
+<p class="font-label uppercase text-[0.7rem] tracking-widest text-on-surface-variant">Human Win-Rate</p>
+</div>
+<div class="bg-surface-container p-10 flex flex-col items-center text-center">
+<p class="font-headline text-5xl font-bold text-tertiary mb-2">250M</p>
+<p class="font-label uppercase text-[0.7rem] tracking-widest text-on-surface-variant">Daily Rankings</p>
+</div>
+</div>
+</section>
+<!-- Detailed Visuals / Diagrams -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-surface-container-high rounded-xl overflow-hidden group">
+<div class="p-8">
+<h3 class="font-headline text-xl font-bold mb-2">Reward Distribution</h3>
+<p class="text-on-surface-variant text-sm">Comparison of reward density between standard ranking and RLHF-optimized policy.</p>
+</div>
+<div class="h-80 bg-black/40 relative">
+<img alt="Ranking Distribution" class="w-full h-full object-cover mix-blend-screen opacity-60 group-hover:scale-105 transition-transform duration-1000" data-alt="Technical chart showing a bell curve distribution of ranking scores with a clear shift towards higher relevance regions in the RLHF version" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6PSLpyXm2EBnFHHxCYAzDcNjR02TiWUDuyy6LLTbFpNClYlFSOAHmYXr4cpfMXgbf2Mojng5I3XjUPxzjd3VACO8OwpvdSFCDd5l9RfT8OT28k3atsIFTUXzFvO22byCCIijxRzDwCmI5Hh93E-hS5HsJjxLNQLa1MXbShFE0E6iipO44yXVLuYdZQxEBKOLOakqGLRAq6of1aWl_BUMLe6K-wAjbGnSGDm0n0L6_kaXGOa-QwYfmwlBGuhO_VKiM_H5mdWR7FXI"/>
+</div>
+</div>
+<div class="bg-surface-container-high rounded-xl overflow-hidden group">
+<div class="p-8">
+<h3 class="font-headline text-xl font-bold mb-2">Latent Preference Space</h3>
+<p class="text-on-surface-variant text-sm">Visualizing how the Reward Model clusters subjective quality metrics.</p>
+</div>
+<div class="h-80 bg-black/40 relative">
+<img alt="Preference Clusters" class="w-full h-full object-cover mix-blend-screen opacity-60 group-hover:scale-105 transition-transform duration-1000" data-alt="T-SNE visualization of high-dimensional user preference data showing distinct clusters representing different quality facets of search results" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBspOMPhfKyb_bQPjVk6KssOpaePRVz9Abmezy60IA2UL63oh_ZNJkQ-FQ4V0AL5pEXc_ogEmUEpdc-JbN4xMYpWhv2diNADEdpocRffRE_aftr4GXFE-u4Gcy18U40-7Pm-s44jy4MjPp9RizbOrNgCgf4phaJCZOWEcujsVlzkffhnZ33YpmB-rtY9gmc8Iophk7q7XnEs6cv8_wDPFOTvI980i-60mhl7xm_N64ECRNpqzQZsS5AN0BYo2knryJ2iNhL21dcOIs"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0e0e0e] w-full py-12 px-8 border-t border-[#ffffff]/10">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 max-w-7xl mx-auto">
+<div class="font-['Space_Grotesk'] text-[#ff8f78] font-bold">ProudMars</div>
+<div class="text-[#adaaaa] font-['Inter'] text-sm tracking-normal">
+                © 2026 ProudMars. Built on the Martian Frontier.
+            </div>
+<div class="flex gap-6">
+<a class="text-[#adaaaa] hover:text-[#ffffff] transition-colors hover:translate-y-[-2px] transition-transform" href="#">LinkedIn</a>
+<a class="text-[#adaaaa] hover:text-[#ffffff] transition-colors hover:translate-y-[-2px] transition-transform" href="#">Twitter</a>
+<a class="text-[#adaaaa] hover:text-[#ffffff] transition-colors hover:translate-y-[-2px] transition-transform" href="#">GitHub</a>
+<a class="text-[#81ecff] underline hover:text-[#ffffff] transition-colors hover:translate-y-[-2px] transition-transform" href="#">Newsletter Signup</a>
+</div>
+</div>
+</footer>
+</body></html>
