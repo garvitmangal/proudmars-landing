@@ -1,214 +1,264 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "surface-container-highest": "#262626",
-              "tertiary-dim": "#00d4ec",
-              "surface-container": "#1a1919",
-              "background": "#0e0e0e",
-              "outline": "#777575",
-              "on-secondary-fixed-variant": "#5c5b5b",
-              "on-tertiary-fixed": "#003840",
-              "primary-container": "#ff775d",
-              "error-container": "#a70138",
-              "surface-container-low": "#131313",
-              "on-tertiary-fixed-variant": "#005762",
-              "outline-variant": "#484847",
-              "tertiary-container": "#00e3fd",
-              "on-primary-fixed-variant": "#5d0900",
-              "on-error": "#490013",
-              "inverse-surface": "#fcf8f8",
-              "secondary-dim": "#d6d4d3",
-              "tertiary-fixed": "#00e3fd",
-              "inverse-primary": "#bb1d00",
-              "on-secondary-fixed": "#403f3f",
-              "inverse-on-surface": "#565554",
-              "surface-container-high": "#201f1f",
-              "primary-fixed": "#ff775d",
-              "surface": "#0e0e0e",
-              "secondary": "#e5e2e1",
-              "surface-bright": "#2c2c2c",
-              "surface-dim": "#0e0e0e",
-              "on-background": "#ffffff",
-              "on-secondary-container": "#d2d0cf",
-              "on-primary-container": "#4c0600",
-              "surface-container-lowest": "#000000",
-              "on-primary": "#610a00",
-              "on-error-container": "#ffb2b9",
-              "error": "#ff6e84",
-              "secondary-container": "#474746",
-              "tertiary": "#81ecff",
-              "tertiary-fixed-dim": "#00d4ec",
-              "surface-variant": "#262626",
-              "on-surface-variant": "#adaaaa",
-              "error-dim": "#d73357",
-              "secondary-fixed-dim": "#d6d4d3",
-              "on-tertiary-container": "#004d57",
-              "on-secondary": "#525151",
-              "on-tertiary": "#005762",
-              "primary-dim": "#ff7257",
-              "on-primary-fixed": "#000000",
-              "surface-tint": "#ff8f78",
-              "secondary-fixed": "#e5e2e1",
-              "on-surface": "#ffffff",
-              "primary-fixed-dim": "#ff5c3e",
-              "primary": "#ff8f78"
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-highest": "#262626",
+                        "tertiary-dim": "#00d4ec",
+                        "surface-container": "#1a1919",
+                        "background": "#0e0e0e",
+                        "outline": "#777575",
+                        "on-secondary-fixed-variant": "#5c5b5b",
+                        "on-tertiary-fixed": "#003840",
+                        "primary-container": "#ff775d",
+                        "error-container": "#a70138",
+                        "surface-container-low": "#131313",
+                        "on-tertiary-fixed-variant": "#005762",
+                        "outline-variant": "#484847",
+                        "tertiary-container": "#00e3fd",
+                        "on-primary-fixed-variant": "#5d0900",
+                        "on-error": "#490013",
+                        "inverse-surface": "#fcf8f8",
+                        "secondary-dim": "#d6d4d3",
+                        "tertiary-fixed": "#00e3fd",
+                        "inverse-primary": "#bb1d00",
+                        "on-secondary-fixed": "#403f3f",
+                        "inverse-on-surface": "#565554",
+                        "surface-container-high": "#201f1f",
+                        "primary-fixed": "#ff775d",
+                        "surface": "#0e0e0e",
+                        "secondary": "#e5e2e1",
+                        "surface-bright": "#2c2c2c",
+                        "surface-dim": "#0e0e0e",
+                        "on-background": "#ffffff",
+                        "on-secondary-container": "#d2d0cf",
+                        "on-primary-container": "#4c0600",
+                        "surface-container-lowest": "#000000",
+                        "on-primary": "#610a00",
+                        "on-error-container": "#ffb2b9",
+                        "error": "#ff6e84",
+                        "secondary-container": "#474746",
+                        "tertiary": "#81ecff",
+                        "tertiary-fixed-dim": "#00d4ec",
+                        "surface-variant": "#262626",
+                        "on-surface-variant": "#adaaaa",
+                        "error-dim": "#d73357",
+                        "secondary-fixed-dim": "#d6d4d3",
+                        "on-tertiary-container": "#004d57",
+                        "on-secondary": "#525151",
+                        "on-tertiary": "#005762",
+                        "primary-dim": "#ff7257",
+                        "on-primary-fixed": "#000000",
+                        "surface-tint": "#ff8f78",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-surface": "#ffffff",
+                        "primary-fixed-dim": "#ff5c3e",
+                        "primary": "#ff8f78"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Space Grotesk"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
             },
-            fontFamily: {
-              "headline": ["Space Grotesk"],
-              "body": ["Inter"],
-              "label": ["Space Grotesk"]
-            },
-            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
-          },
-        },
-      }
+        }
     </script>
-<style>
+    <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
+
         body {
             background-color: #0e0e0e;
             color: #ffffff;
             font-family: 'Inter', sans-serif;
         }
+
         .text-glow-primary {
             text-shadow: 0 0 15px rgba(255, 143, 120, 0.4);
         }
+
         .glass-panel {
             backdrop-filter: blur(12px);
             background: rgba(26, 25, 25, 0.7);
         }
     </style>
 </head>
+
 <body class="bg-background text-on-background selection:bg-primary selection:text-on-primary">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-[#0e0e0e]/80 backdrop-blur-xl bg-gradient-to-b from-[#0e0e0e] to-transparent">
-<div class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
-<div class="text-2xl font-bold font-['Space_Grotesk'] text-[#ff8f78] tracking-tighter uppercase">
-            ProudMars
-        </div>
-<div class="hidden md:flex gap-8 items-center">
-<a class="text-[#adaaaa] hover:text-[#ffffff] transition-colors font-['Space_Grotesk'] uppercase tracking-wider text-[0.75rem]" href="/">Home</a>
-<!-- <a class="text-[#ff8f78] font-bold border-b-2 border-[#ff8f78] pb-1 font-['Space_Grotesk'] uppercase tracking-wider text-[0.75rem]" href="#">Portfolio</a> -->
-<!-- <a class="text-[#adaaaa] hover:text-[#ffffff] transition-colors font-['Space_Grotesk'] uppercase tracking-wider text-[0.75rem]" href="#">Blog</a> -->
-<a class="text-[#adaaaa] hover:text-[#ffffff] transition-colors font-['Space_Grotesk'] uppercase tracking-wider text-[0.75rem]" href="/contact.html">About</a>
-<button class="ml-4 px-6 py-2 bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-['Space_Grotesk'] font-bold text-sm uppercase tracking-widest rounded-md hover:scale-105 transition-transform active:scale-95 duration-200">
-                Get in Touch
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-[#0e0e0e]/80 backdrop-blur-xl bg-gradient-to-b from-[#0e0e0e] to-transparent">
+        <div class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+            <div class="text-2xl font-bold font-['Space_Grotesk'] text-[#ff8f78] tracking-tighter uppercase">
+                ProudMars
+            </div>
+            <div class="hidden md:flex gap-8 items-center">
+                <a class="text-[#adaaaa] hover:text-[#ffffff] transition-colors font-['Space_Grotesk'] uppercase tracking-wider text-[0.75rem]"
+                    href="/">Home</a>
+                <!-- <a class="text-[#ff8f78] font-bold border-b-2 border-[#ff8f78] pb-1 font-['Space_Grotesk'] uppercase tracking-wider text-[0.75rem]" href="#">Portfolio</a> -->
+                <!-- <a class="text-[#adaaaa] hover:text-[#ffffff] transition-colors font-['Space_Grotesk'] uppercase tracking-wider text-[0.75rem]" href="#">Blog</a> -->
+                <a class="text-[#adaaaa] hover:text-[#ffffff] transition-colors font-['Space_Grotesk'] uppercase tracking-wider text-[0.75rem]"
+                    href="/contact.html">About</a>
+                <button
+                    class="ml-4 px-6 py-2 bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-['Space_Grotesk'] font-bold text-sm uppercase tracking-widest rounded-md hover:scale-105 transition-transform active:scale-95 duration-200">
+                    Get in Touch
+                </button>
+            </div>
+            <button class="md:hidden text-primary">
+                <span class="material-symbols-outlined">menu</span>
             </button>
-</div>
-<button class="md:hidden text-primary">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-</nav>
-<main class="pt-32 pb-20 px-6 max-w-7xl mx-auto overflow-hidden">
-<!-- Hero Section -->
-<section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end mb-24">
-<div class="lg:col-span-8">
-<span class="font-headline font-bold uppercase tracking-[0.2em] text-primary text-xs mb-4 block">E-Commerce Data Science / Case 09</span>
-<h1 class="font-headline font-bold text-5xl md:text-7xl lg:text-8xl tracking-tighter leading-[0.9] text-glow-primary mb-8">
-                Predictive <br/> Analytics: <span class="text-tertiary">Conversion</span> <br/> Intelligence.
-            </h1>
-<p class="font-body text-on-surface-variant text-lg max-w-2xl leading-relaxed">
-                Anticipating user demographics, purchase intent, and long-term conversion probability through high-velocity clickstream processing and ensemble modeling.
-            </p>
-</div>
-<div class="lg:col-span-4 flex flex-col gap-6">
-<div class="p-6 bg-surface-container-low border-l-4 border-primary">
-<span class="font-headline text-[0.65rem] uppercase tracking-widest text-on-surface-variant block mb-1">Status</span>
-<span class="font-body text-xl font-medium">Production Live</span>
-</div>
-<div class="p-6 bg-surface-container-low border-l-4 border-tertiary">
-<span class="font-headline text-[0.65rem] uppercase tracking-widest text-on-surface-variant block mb-1">Impact</span>
-<span class="font-body text-xl font-medium">Global Retail Hub</span>
-</div>
-</div>
-</section>
-<!-- Image Content / Asymmetric Bento -->
-<section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24">
-<div class="md:col-span-2 h-[500px] overflow-hidden rounded-xl relative group">
-<img alt="Data Visualization" class="w-full h-full object-cover grayscale brightness-50 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" data-alt="Complex 3D visualization of a conversion funnel showing high-density user traffic paths and demographic clusters as glowing points of light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPSN_rVQwP-aI3zTQXPrkmmg-XTW27EXnUSKpDncKA_hnAXcCcU9_I9vv9MF7yBhxoD9QkpOxd55R8smljAsGrpuzPDXv_zMxLcNtd52N20BTNot72DjXFeGPHdRspkWYWRrqkK02yE6afvmjDGVYpnye8ozBG8bm5MXQrWR2NOlWKyMiX9SzkPI6AAdcDuXdOfFy7pPgpwsxEGqIxIcNldrYIbOSr3m9fGH5ATAJ1kDnrU_Bu-EgiwhiLEl5ulEfrsY5xFkMZxoQ"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60"></div>
-<div class="absolute bottom-8 left-8">
-<span class="font-headline text-xs font-bold uppercase tracking-widest text-primary bg-background/80 px-3 py-1 backdrop-blur-sm">Behavior Flow Analysis</span>
-</div>
-</div>
-<div class="flex flex-col gap-6">
-<div class="flex-1 bg-surface-container rounded-xl p-8 flex flex-col justify-center">
-<h3 class="font-headline text-4xl font-bold text-tertiary mb-2">92.1%</h3>
-<p class="font-headline text-xs uppercase tracking-widest text-on-surface-variant">Demographic Precision</p>
-</div>
-<div class="flex-1 bg-surface-container rounded-xl p-8 flex flex-col justify-center">
-<h3 class="font-headline text-4xl font-bold text-primary mb-2">+18.5%</h3>
-<p class="font-headline text-xs uppercase tracking-widest text-on-surface-variant">Conversion Uplift</p>
-</div>
-<div class="flex-1 bg-surface-container rounded-xl p-8 flex flex-col justify-center">
-<h3 class="font-headline text-4xl font-bold text-tertiary-container mb-2">-34%</h3>
-<p class="font-headline text-xs uppercase tracking-widest text-on-surface-variant">Churn Rate Reduction</p>
-</div>
-</div>
-</section>
-<!-- The Challenge & Solution -->
-<section class="grid grid-cols-1 lg:grid-cols-2 gap-20 mb-32">
-<div>
-<h2 class="font-headline text-xs font-bold uppercase tracking-[0.3em] text-outline mb-6">The Challenge</h2>
-<p class="font-headline text-3xl font-light leading-snug mb-8">
-                Processing high-volume clickstream data to anticipate user needs <span class="text-primary italic">before</span> the next click.
-            </p>
-<div class="space-y-6 font-body text-on-surface-variant leading-relaxed">
-<p>E-commerce platforms generate millions of interaction events per minute. The challenge lies in extracting meaningful signals from noisy clickstream data—including hover times, scroll depth, and navigation paths—to predict purchase intent in real-time.</p>
-<p>Traditional batch processing methods are too slow to influence the current session. We required a low-latency architecture capable of scoring users on-the-fly to personalize the shopping experience instantaneously.</p>
-</div>
-</div>
-<div class="relative">
-<div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/10 rounded-full blur-[100px]"></div>
-<h2 class="font-headline text-xs font-bold uppercase tracking-[0.3em] text-outline mb-6">The Solution</h2>
-<div class="bg-surface-container-high p-10 rounded-xl relative z-10 border-t border-white/5">
-<h3 class="font-headline text-2xl font-bold mb-6 text-on-surface">Hybrid Neural-Gradient Ensemble</h3>
-<p class="font-body text-on-surface-variant mb-8 leading-relaxed">
-                    A custom ensemble model that combines the structured data strengths of Gradient Boosting Machines with the latent relationship discovery of Neural Collaborative Filtering. This dual-path architecture enables both high precision in demographic inference and deep personalization in product recommendations.
+        </div>
+    </nav>
+    <main class="pt-32 pb-20 px-6 max-w-7xl mx-auto overflow-hidden">
+        <!-- Hero Section -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end mb-24">
+            <div class="lg:col-span-8">
+                <span
+                    class="font-headline font-bold uppercase tracking-[0.2em] text-primary text-xs mb-4 block">E-Commerce
+                    Data Science / Case 09</span>
+                <h1
+                    class="font-headline font-bold text-5xl md:text-7xl lg:text-8xl tracking-tighter leading-[0.9] text-glow-primary mb-8">
+                    Predictive <br /> Analytics: <span class="text-tertiary">Conversion</span> <br /> Intelligence.
+                </h1>
+                <p class="font-body text-on-surface-variant text-lg max-w-2xl leading-relaxed">
+                    Anticipating user demographics, purchase intent, and long-term conversion probability through
+                    high-velocity clickstream processing and ensemble modeling.
                 </p>
-<div class="flex flex-wrap gap-3">
-<span class="px-4 py-1 rounded-full bg-tertiary/10 text-tertiary font-headline text-[0.65rem] uppercase font-bold border border-tertiary/20">Gradient Boosting</span>
-<span class="px-4 py-1 rounded-full bg-tertiary/10 text-tertiary font-headline text-[0.65rem] uppercase font-bold border border-tertiary/20">Neural Filtering</span>
-<span class="px-4 py-1 rounded-full bg-tertiary/10 text-tertiary font-headline text-[0.65rem] uppercase font-bold border border-tertiary/20">Real-time Inference</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Technical Deep Dive: Code & Models -->
-<section class="mb-32">
-<div class="mb-12">
-<h2 class="font-headline text-xs font-bold uppercase tracking-[0.3em] text-outline mb-4 text-center">Core Model Infrastructure</h2>
-<p class="font-headline text-4xl font-bold text-center">Propensity Scoring Engine</p>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-<!-- Code Snippet Card -->
-<div class="lg:col-span-2 bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/30">
-<div class="bg-surface-container-highest px-6 py-3 flex items-center justify-between">
-<div class="flex gap-2">
-<div class="w-3 h-3 rounded-full bg-error/50"></div>
-<div class="w-3 h-3 rounded-full bg-primary/50"></div>
-<div class="w-3 h-3 rounded-full bg-tertiary/50"></div>
-</div>
-<span class="font-headline text-[0.65rem] uppercase tracking-widest text-on-surface-variant">propensity_scoring.py</span>
-</div>
-<div class="p-8 font-mono text-sm leading-relaxed overflow-x-auto text-on-surface-variant">
-<pre class="whitespace-pre"><code><span class="text-tertiary">import</span> torch
+            </div>
+            <div class="lg:col-span-4 flex flex-col gap-6">
+                <div class="p-6 bg-surface-container-low border-l-4 border-primary">
+                    <span
+                        class="font-headline text-[0.65rem] uppercase tracking-widest text-on-surface-variant block mb-1">Status</span>
+                    <span class="font-body text-xl font-medium">Production Live</span>
+                </div>
+                <div class="p-6 bg-surface-container-low border-l-4 border-tertiary">
+                    <span
+                        class="font-headline text-[0.65rem] uppercase tracking-widest text-on-surface-variant block mb-1">Impact</span>
+                    <span class="font-body text-xl font-medium">Global Retail Hub</span>
+                </div>
+            </div>
+        </section>
+        <!-- Image Content / Asymmetric Bento -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24">
+            <div class="md:col-span-2 h-[500px] overflow-hidden rounded-xl relative group">
+                <img alt="Data Visualization"
+                    class="w-full h-full object-cover grayscale brightness-50 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                    data-alt="Complex 3D visualization of a conversion funnel showing high-density user traffic paths and demographic clusters as glowing points of light"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPSN_rVQwP-aI3zTQXPrkmmg-XTW27EXnUSKpDncKA_hnAXcCcU9_I9vv9MF7yBhxoD9QkpOxd55R8smljAsGrpuzPDXv_zMxLcNtd52N20BTNot72DjXFeGPHdRspkWYWRrqkK02yE6afvmjDGVYpnye8ozBG8bm5MXQrWR2NOlWKyMiX9SzkPI6AAdcDuXdOfFy7pPgpwsxEGqIxIcNldrYIbOSr3m9fGH5ATAJ1kDnrU_Bu-EgiwhiLEl5ulEfrsY5xFkMZxoQ" />
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60">
+                </div>
+                <div class="absolute bottom-8 left-8">
+                    <span
+                        class="font-headline text-xs font-bold uppercase tracking-widest text-primary bg-background/80 px-3 py-1 backdrop-blur-sm">Behavior
+                        Flow Analysis</span>
+                </div>
+            </div>
+            <div class="flex flex-col gap-6">
+                <div class="flex-1 bg-surface-container rounded-xl p-8 flex flex-col justify-center">
+                    <h3 class="font-headline text-4xl font-bold text-tertiary mb-2">92.1%</h3>
+                    <p class="font-headline text-xs uppercase tracking-widest text-on-surface-variant">Demographic
+                        Precision</p>
+                </div>
+                <div class="flex-1 bg-surface-container rounded-xl p-8 flex flex-col justify-center">
+                    <h3 class="font-headline text-4xl font-bold text-primary mb-2">+18.5%</h3>
+                    <p class="font-headline text-xs uppercase tracking-widest text-on-surface-variant">Conversion Uplift
+                    </p>
+                </div>
+                <div class="flex-1 bg-surface-container rounded-xl p-8 flex flex-col justify-center">
+                    <h3 class="font-headline text-4xl font-bold text-tertiary-container mb-2">-34%</h3>
+                    <p class="font-headline text-xs uppercase tracking-widest text-on-surface-variant">Churn Rate
+                        Reduction</p>
+                </div>
+            </div>
+        </section>
+        <!-- The Challenge & Solution -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-20 mb-32">
+            <div>
+                <h2 class="font-headline text-xs font-bold uppercase tracking-[0.3em] text-outline mb-6">The Challenge
+                </h2>
+                <p class="font-headline text-3xl font-light leading-snug mb-8">
+                    Processing high-volume clickstream data to anticipate user needs <span
+                        class="text-primary italic">before</span> the next click.
+                </p>
+                <div class="space-y-6 font-body text-on-surface-variant leading-relaxed">
+                    <p>E-commerce platforms generate millions of interaction events per minute. The challenge lies in
+                        extracting meaningful signals from noisy clickstream data—including hover times, scroll depth,
+                        and navigation paths—to predict purchase intent in real-time.</p>
+                    <p>Traditional batch processing methods are too slow to influence the current session. We required a
+                        low-latency architecture capable of scoring users on-the-fly to personalize the shopping
+                        experience instantaneously.</p>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/10 rounded-full blur-[100px]"></div>
+                <h2 class="font-headline text-xs font-bold uppercase tracking-[0.3em] text-outline mb-6">The Solution
+                </h2>
+                <div class="bg-surface-container-high p-10 rounded-xl relative z-10 border-t border-white/5">
+                    <h3 class="font-headline text-2xl font-bold mb-6 text-on-surface">Hybrid Neural-Gradient Ensemble
+                    </h3>
+                    <p class="font-body text-on-surface-variant mb-8 leading-relaxed">
+                        A custom ensemble model that combines the structured data strengths of Gradient Boosting
+                        Machines with the latent relationship discovery of Neural Collaborative Filtering. This
+                        dual-path architecture enables both high precision in demographic inference and deep
+                        personalization in product recommendations.
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <span
+                            class="px-4 py-1 rounded-full bg-tertiary/10 text-tertiary font-headline text-[0.65rem] uppercase font-bold border border-tertiary/20">Gradient
+                            Boosting</span>
+                        <span
+                            class="px-4 py-1 rounded-full bg-tertiary/10 text-tertiary font-headline text-[0.65rem] uppercase font-bold border border-tertiary/20">Neural
+                            Filtering</span>
+                        <span
+                            class="px-4 py-1 rounded-full bg-tertiary/10 text-tertiary font-headline text-[0.65rem] uppercase font-bold border border-tertiary/20">Real-time
+                            Inference</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Technical Deep Dive: Code & Models -->
+        <section class="mb-32">
+            <div class="mb-12">
+                <h2 class="font-headline text-xs font-bold uppercase tracking-[0.3em] text-outline mb-4 text-center">
+                    Core Model Infrastructure</h2>
+                <p class="font-headline text-4xl font-bold text-center">Propensity Scoring Engine</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Code Snippet Card -->
+                <div
+                    class="lg:col-span-2 bg-surface-container-lowest rounded-xl overflow-hidden border border-outline-variant/30">
+                    <div class="bg-surface-container-highest px-6 py-3 flex items-center justify-between">
+                        <div class="flex gap-2">
+                            <div class="w-3 h-3 rounded-full bg-error/50"></div>
+                            <div class="w-3 h-3 rounded-full bg-primary/50"></div>
+                            <div class="w-3 h-3 rounded-full bg-tertiary/50"></div>
+                        </div>
+                        <span
+                            class="font-headline text-[0.65rem] uppercase tracking-widest text-on-surface-variant">propensity_scoring.py</span>
+                    </div>
+                    <div class="p-8 font-mono text-sm leading-relaxed overflow-x-auto text-on-surface-variant">
+                        <pre class="whitespace-pre"><code><span class="text-tertiary">import</span> torch
 <span class="text-tertiary">from</span> xgboost <span class="text-tertiary">import</span> XGBClassifier
 <span class="text-tertiary">from</span> ecommerce_ml <span class="text-tertiary">import</span> NeuralCollaborativeFilter
 
@@ -226,60 +276,74 @@
         <span class="text-outline-variant"># Final weighted fusion for conversion probability</span>
         conversion_score = <span class="text-primary-container">0.6</span> * gbm_prob + <span class="text-primary-container">0.4</span> * ncf_latent
         <span class="text-tertiary">return</span> torch.sigmoid(conversion_score)</code></pre>
-</div>
-</div>
-<!-- Model Chips -->
-<div class="flex flex-col gap-4">
-<div class="p-6 bg-surface-container border-l-4 border-tertiary">
-<h4 class="font-headline font-bold text-on-surface mb-2">Gradient Boosting</h4>
-<p class="font-body text-xs text-on-surface-variant">Utilizing XGBoost for high-precision classification of categorical user attributes and session-based event triggers.</p>
-</div>
-<div class="p-6 bg-surface-container border-l-4 border-primary">
-<h4 class="font-headline font-bold text-on-surface mb-2">Neural Collaborative Filtering</h4>
-<p class="font-body text-xs text-on-surface-variant">Deep learning architecture to learn complex user-item interactions through embedding layers and multi-layer perceptrons.</p>
-</div>
-<div class="p-6 bg-surface-container border-l-4 border-tertiary-container">
-<h4 class="font-headline font-bold text-on-surface mb-2">Propensity Scoring</h4>
-<p class="font-body text-xs text-on-surface-variant">Advanced statistical modeling to assign a likelihood score for specific user actions such as "Add to Cart" or "Churn".</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Final CTA / Results Visualization -->
-<section class="relative bg-surface-container-high rounded-2xl p-12 overflow-hidden">
-<div class="absolute top-0 right-0 w-full h-full opacity-20 pointer-events-none">
-<img alt="Behavioral Data Grid" class="w-full h-full object-cover" data-alt="Abstract glowing network of customer journey touchpoints and predictive nodes across a dark digital surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBkE4zimECu9alDRFc88Vxt13aV3SYWpCtFCxiGeRKnuKioP4UgqID7ErnFRM5WpNTW39JCYHlIfiwI55MpCfuDChEL6vsvVr7cN4Ml0XTF1eduBfDOuHYLrL6ZJMl67T63kxXl_abQfAknZXACuzniYDVxTHcS3-bbD1hjyglypTALC-b09a_Cx5KtfHqYrmnDZMvNIhq29nT_goOZxzomzkSiNvRgKh1IOQyeyiVlabQyf216o2GKk7A7SjG6glleL6ezzczzoU"/>
-</div>
-<div class="relative z-10 max-w-2xl">
-<h2 class="font-headline text-5xl font-bold tracking-tighter mb-8 leading-tight">The Frontier of <span class="text-primary">Retail Intelligence</span> is Here.</h2>
-<div class="flex flex-col sm:flex-row gap-6">
-<button class="px-8 py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-headline font-bold uppercase tracking-widest text-sm rounded-md shadow-2xl shadow-primary/20">
-                    Download Case Study
-                </button>
-<button class="px-8 py-4 border border-outline-variant hover:bg-white/5 transition-colors text-on-surface font-headline font-bold uppercase tracking-widest text-sm rounded-md">
-                    Request Demo
-                </button>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="bg-[#0e0e0e] w-full py-12 px-8 border-t border-[#ffffff]/10">
-<div class="flex flex-col md:flex-row justify-between items-center gap-8 max-w-7xl mx-auto">
-<div class="flex flex-col gap-4">
-<div class="font-['Space_Grotesk'] text-[#ff8f78] font-bold text-xl tracking-tighter">
-                ProudMars
+                    </div>
+                </div>
+                <!-- Model Chips -->
+                <div class="flex flex-col gap-4">
+                    <div class="p-6 bg-surface-container border-l-4 border-tertiary">
+                        <h4 class="font-headline font-bold text-on-surface mb-2">Gradient Boosting</h4>
+                        <p class="font-body text-xs text-on-surface-variant">Utilizing XGBoost for high-precision
+                            classification of categorical user attributes and session-based event triggers.</p>
+                    </div>
+                    <div class="p-6 bg-surface-container border-l-4 border-primary">
+                        <h4 class="font-headline font-bold text-on-surface mb-2">Neural Collaborative Filtering</h4>
+                        <p class="font-body text-xs text-on-surface-variant">Deep learning architecture to learn complex
+                            user-item interactions through embedding layers and multi-layer perceptrons.</p>
+                    </div>
+                    <div class="p-6 bg-surface-container border-l-4 border-tertiary-container">
+                        <h4 class="font-headline font-bold text-on-surface mb-2">Propensity Scoring</h4>
+                        <p class="font-body text-xs text-on-surface-variant">Advanced statistical modeling to assign a
+                            likelihood score for specific user actions such as "Add to Cart" or "Churn".</p>
+                    </div>
+                </div>
             </div>
-<div class="text-[#adaaaa] font-['Inter'] text-sm tracking-normal">
-                © 2026 ProudMars. Built on the Martian Frontier.
+        </section>
+        <!-- Final CTA / Results Visualization -->
+        <!-- <section class="relative bg-surface-container-high rounded-2xl p-12 overflow-hidden">
+            <div class="absolute top-0 right-0 w-full h-full opacity-20 pointer-events-none">
+                <img alt="Behavioral Data Grid" class="w-full h-full object-cover"
+                    data-alt="Abstract glowing network of customer journey touchpoints and predictive nodes across a dark digital surface"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBkE4zimECu9alDRFc88Vxt13aV3SYWpCtFCxiGeRKnuKioP4UgqID7ErnFRM5WpNTW39JCYHlIfiwI55MpCfuDChEL6vsvVr7cN4Ml0XTF1eduBfDOuHYLrL6ZJMl67T63kxXl_abQfAknZXACuzniYDVxTHcS3-bbD1hjyglypTALC-b09a_Cx5KtfHqYrmnDZMvNIhq29nT_goOZxzomzkSiNvRgKh1IOQyeyiVlabQyf216o2GKk7A7SjG6glleL6ezzczzoU" />
             </div>
-</div>
-<div class="flex gap-8">
-<a class="text-[#adaaaa] hover:text-[#ffffff] transition-colors font-['Inter'] text-sm" href="#">LinkedIn</a>
-<a class="text-[#adaaaa] hover:text-[#ffffff] transition-colors font-['Inter'] text-sm" href="#">Twitter</a>
-<a class="text-[#adaaaa] hover:text-[#ffffff] transition-colors font-['Inter'] text-sm" href="#">GitHub</a>
-<a class="text-[#81ecff] font-bold font-['Inter'] text-sm hover:underline transition-all" href="#">Research Blog</a>
-</div>
-</div>
-</footer>
-</body></html>
+            <div class="relative z-10 max-w-2xl">
+                <h2 class="font-headline text-5xl font-bold tracking-tighter mb-8 leading-tight">The Frontier of <span
+                        class="text-primary">Retail Intelligence</span> is Here.</h2>
+                <div class="flex flex-col sm:flex-row gap-6">
+                    <button
+                        class="px-8 py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-headline font-bold uppercase tracking-widest text-sm rounded-md shadow-2xl shadow-primary/20">
+                        Download Case Study
+                    </button>
+                    <button
+                        class="px-8 py-4 border border-outline-variant hover:bg-white/5 transition-colors text-on-surface font-headline font-bold uppercase tracking-widest text-sm rounded-md">
+                        Request Demo
+                    </button>
+                </div>
+            </div>
+        </section> -->
+    </main>
+    <!-- Footer -->
+    <footer class="bg-[#0e0e0e] w-full py-12 px-8 border-t border-[#ffffff]/10">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-8 max-w-7xl mx-auto">
+            <div class="flex flex-col gap-4">
+                <div class="font-['Space_Grotesk'] text-[#ff8f78] font-bold text-xl tracking-tighter">
+                    ProudMars
+                </div>
+                <div class="text-[#adaaaa] font-['Inter'] text-sm tracking-normal">
+                    © 2026 ProudMars. Built on the Martian Frontier.
+                </div>
+            </div>
+            <div class="flex gap-8">
+                <a class="text-[#adaaaa] hover:text-[#ffffff] transition-colors font-['Inter'] text-sm"
+                    href="#">LinkedIn</a>
+                <a class="text-[#adaaaa] hover:text-[#ffffff] transition-colors font-['Inter'] text-sm"
+                    href="#">Twitter</a>
+                <a class="text-[#adaaaa] hover:text-[#ffffff] transition-colors font-['Inter'] text-sm"
+                    href="#">GitHub</a>
+                <a class="text-[#81ecff] font-bold font-['Inter'] text-sm hover:underline transition-all"
+                    href="#">Research Blog</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
